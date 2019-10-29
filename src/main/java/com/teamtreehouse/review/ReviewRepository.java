@@ -12,4 +12,6 @@ public interface ReviewRepository extends PagingAndSortingRepository<Review, Lon
     @Override
     @PreAuthorize("hasRole('ROLE_ADMIN') or #review.reviewer?.username == authentication.name")
     void delete(@Param("review") Review entity);
+
+
 }
