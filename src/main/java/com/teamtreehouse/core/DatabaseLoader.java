@@ -62,7 +62,7 @@ public class DatabaseLoader implements ApplicationRunner {
         );
 
         users.save(students);
-        users.save(new User("Vivian", "Coday", "viviancoday","12345", new String[] {"ROLE_USER", "ROLE_ADMIN"}));
+        users.save(new User("viviancoday", "Vivian", "Coday", "12345", new String[] {"ROLE_USER", "ROLE_ADMIN"}));
 
         List<Course> bunchOfCourses = new ArrayList<>();
         IntStream.range(0, 100)
